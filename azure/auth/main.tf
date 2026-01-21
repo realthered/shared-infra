@@ -20,12 +20,12 @@ terraform {
 }
 
 provider "azurerm" {
-    alias = "australiasoutheast"
+  alias = "australiasoutheast"
 
-    subscription_id = var.subscription_id
-    features {}
+  subscription_id = var.subscription_id
+  features {}
 }
 
 provider "azuread" {
-    alias = "australiasoutheast"
+  alias = "australiasoutheast"
 }

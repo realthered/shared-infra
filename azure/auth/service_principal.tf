@@ -18,5 +18,5 @@ resource "azuread_application_password" "realthered_gha_app_password" {
   provider = azuread.australiasoutheast
 
   application_id = azuread_application.realthered_gha_app.id
-  display_name          = "realthered-gha-app-password"
+  display_name   = "realthered-gha-app-password"
 }
