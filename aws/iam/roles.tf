@@ -1,9 +1,9 @@
 module "realthered_gha_cicd_role" {
-  source    = "terraform-aws-modules/iam/aws//modules/iam-role"
-
   providers = {
     aws = aws.us-east-1
   }
+
+  source    = "terraform-aws-modules/iam/aws//modules/iam-role"
 
   name = "realthered-gha-cicd-role"
   enable_github_oidc = true
