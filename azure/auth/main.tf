@@ -1,0 +1,31 @@
+terraform {
+  required_version = "1.14.3"
+
+  backend "s3" {
+    region = "us-east-1"
+    bucket = "personal-infra-states"
+    key    = "shared-infra/azure.tfstate"
+  }
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 3.0"
+    }
+  }
+}
+
+provider "azurerm" {
+    alias = "australiasoutheast"
+
+    subscription_id = var.subscription_id
+    features {}
+}
+
+provider "azuread" {
+    alias = "australiasoutheast"
+}
