@@ -33,7 +33,8 @@ data "aws_iam_policy_document" "realthered_gha_cicd_policy" {
       "iam:DetachRolePolicy",
       "iam:Get*",
       "iam:List*",
-      "iam:Tag*"
+      "iam:Tag*",
+      "iam:PassRole"
     ]
     resources = ["*"]
   }
